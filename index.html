@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vexora IT Solution | Building the Future of Digital Innovation</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vexora IT Solution is crafting a modern experience for businesses and professionals. Custom Software, Web Development, Cloud Services, and AI Automation.">
+    <meta name="keywords" content="Vexora, IT Solutions, Software Development, Web Design, Sri Lanka, AI Automation, Cloud Hosting">
+    <meta name="author" content="Vexora IT Solution">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vexora IT Solution | Coming Soon">
+    <meta property="og:description" content="Building the Future of Digital Innovation. Our new website is under development.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        space: ['Space Grotesk', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brandLightBg: '#FAFCFF',
+                        brandTextDark: '#0A141F',
+                        brandPrimary: '#17B8C5',
+                        brandSecondary: '#0F8AA5',
+                        brandAccent1: '#FFC21A',
+                        brandAccent2: '#FF8F3D',
+                    },
+                    animation: {
+                        'blob': 'blob 12s infinite alternate',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '50%': { transform: 'translate(30px, -40px) scale(1.1)' },
+                            '100%': { transform: 'translate(-10px, 20px) scale(0.95)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAFCFF;
+            overflow-x: hidden;
+        }
+        /* Custom Premium Light Glassmorphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px rgba(15, 138, 165, 0.08) solid;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.04);
+        }
+        .glass-card:hover {
+            border-color: rgba(23, 184, 197, 0.25);
+            box-shadow: 0 15px 35px -5px rgba(23, 184, 197, 0.08);
+        }
+        /* Gradient Text */
+        .text-gradient-primary {
+            background: linear-gradient(135deg, #0F8AA5 0%, #17B8C5 50%, #FF8F3D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Gradient Border Button for Light Theme */
+        .gradient-border-btn {
+            position: relative;
+            border: 1px solid transparent;
+            background-image: linear-gradient(#FAFCFF, #FAFCFF), linear-gradient(135deg, #17B8C5, #FF8F3D);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FAFCFF; }
+        ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0F8AA5; }
+        
+        /* Cursor Glow for Light Mode (Subtle Soft Tint) */
+        #glow-runtime {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(23,184,197,0.06) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            transition: width 0.2s ease, height 0.2s ease;
+        }
+    </style>
+</head>
+<body class="font-outfit text-gray-600 antialiased selection:bg-brandPrimary/20 selection:text-brandSecondary">
+
+    <!-- Preloader -->
+    <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-brandLightBg transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <div class="w-14 h-14 border-4 border-t-brandSecondary border-r-brandPrimary border-b-brandAccent2 border-l-transparent rounded-full animate-spin"></div>
+            <span class="mt-4 font-space text-xs tracking-widest text-brandSecondary font-semibold uppercase animate-pulse">Vexora Initializing...</span>
+        </div>
+    </div>
+
+    <!-- Mouse Glow Effect -->
+    <div id="glow-runtime"></div>
+
+    <!-- Premium Abstract Background Shapes -->
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <!-- Soft Light Blur Blobs -->
+        <div class="absolute top-[-5%] left-[-5%] w-[500px] h-[500px] rounded-full bg-brandPrimary opacity-[0.06] filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-[30%] right-[-5%] w-[600px] h-[600px] rounded-full bg-brandAccent2 opacity-[0.04] filter blur-[120px] animate-blob" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-[-10%] left-[15%] w-[400px] h-[400px] rounded-full bg-brandSecondary opacity-[0.05] filter blur-[90px] animate-blob" style="animation-delay: 4s;"></div>
+        
+        <!-- Premium Subtle Grid Overlay -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(15,138,165,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(15,138,165,0.15) 1px, transparent 1px); background-size: 50px 50px;"></div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 min-h-screen flex flex-col justify-between">
+        
+        <!-- Header / Logo -->
+        <header class="flex justify-between items-center">
+            <div class="flex items-center space-x-3 group cursor-pointer animate-float">
+                <!-- Abstract Premium Tech Logo -->
+                    <img src="logo.png?v=0" height="100" width="100">
+                
+            </div>
+            
+            <div class="hidden sm:inline-flex items-center text-[11px] font-semibold uppercase tracking-widest text-gray-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse mr-2"></span> System Operational
+            </div>
+        </header>
+
+        <!-- Hero Content Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto pt-12 lg:pt-0">
+            
+            <!-- Left Column: Copy & Form -->
+            <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                <!-- Premium Modern Badge -->
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-brandSecondary">
+                    <span class="flex h-2 w-2 rounded-full bg-brandAccent2 animate-pulse"></span>
+                    <span class="font-space tracking-wide">Next-Gen Digital Architecture</span>
+                </div>
+                
+                <!-- Main Heading -->
+                <div class="space-y-4">
+                    <h1 class="font-space font-bold text-4xl sm:text-5xl lg:text-6xl text-brandTextDark leading-none tracking-tight">
+                        Building the Future of <br>
+                        <span class="text-gradient-primary">Digital Innovation</span>
+                    </h1>
+                    <p class="text-gray-500 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Our new website is under development. We're crafting a modern experience for forward-thinking businesses and professionals.
+                    </p>
+                </div>
+
+                <!-- Action CTA Controls -->
+                <div class="max-w-md mx-auto lg:mx-0">
+<form id="notifyForm" class="sm:flex items-center gap-2 p-1.5 rounded-2xl bg-white border border-slate-200 shadow-sm focus-within:border-brandPrimary focus-within:ring-2 focus-within:ring-brandPrimary/10 transition-all">
+    <input type="email" name="email" placeholder="Enter your business email" required class="w-full px-4 py-3 bg-transparent text-brandTextDark text-sm rounded-xl focus:outline-none placeholder-gray-400 font-outfit" />
+    <button type="submit" id="submitBtn" class="w-full sm:w-auto mt-2 sm:mt-0 whitespace-nowrap bg-gradient-to-r from-brandSecondary to-brandPrimary hover:from-brandPrimary hover:to-brandSecondary text-white font-space font-bold text-sm px-6 py-3 rounded-xl transition-all duration-300 transform active:scale-95 shadow-md shadow-brandSecondary/10">
+        <span id="btnText">Notify Me</span> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+    </button>
+</form>
+                    <div class="flex justify-center lg:justify-start gap-4 mt-4">
+                        <a href="#contact" class="gradient-border-btn px-5 py-2.5 rounded-xl font-space font-semibold text-xs text-brandSecondary uppercase tracking-wider transition-all duration-300 hover:shadow-sm">
+                            <i class="fa-regular fa-envelope mr-1.5 text-brandSecondary"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Features Grid & Contact -->
+            <div id="contact" class="lg:col-span-5 space-y-6">
+                <!-- Features Card -->
+                <div class="glass-card p-6 rounded-3xl relative overflow-hidden">
+                    <h3 class="font-space text-xs font-bold uppercase tracking-widest text-brandTextDark border-b border-slate-100 pb-3 mb-4">Our Core Capabilities</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-7 h-7 rounded-lg bg-brandPrimary/10 flex items-center justify-center text-brandSecondary text-xs"><i class="fa-solid fa-check"></i></div>
+                            <span class="text-xs font-semibold text-gray-700">Web Development</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-7 h-7 rounded-lg bg-brandPrimary/10 flex items-center justify-center text-brandSecondary text-xs"><i class="fa-solid fa-check"></i></div>
+                            <span class="text-xs font-semibold text-gray-700">Custom Software</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-7 h-7 rounded-lg bg-brandPrimary/10 flex items-center justify-center text-brandSecondary text-xs"><i class="fa-solid fa-check"></i></div>
+                            <span class="text-xs font-semibold text-gray-700">Cloud & Hosting</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-7 h-7 rounded-lg bg-brandPrimary/10 flex items-center justify-center text-brandSecondary text-xs"><i class="fa-solid fa-check"></i></div>
+                            <span class="text-xs font-semibold text-gray-700">Branding & UI/UX</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-7 h-7 rounded-lg bg-brandPrimary/10 flex items-center justify-center text-brandSecondary text-xs"><i class="fa-solid fa-check"></i></div>
+                            <span class="text-xs font-semibold text-gray-700">AI Automation</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-7 h-7 rounded-lg bg-brandPrimary/10 flex items-center justify-center text-brandSecondary text-xs"><i class="fa-solid fa-check"></i></div>
+                            <span class="text-xs font-semibold text-gray-700">IT Consultancy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HQ Contact Info Glass Card -->
+                <div class="glass-card p-6 rounded-3xl space-y-4">
+                    <h3 class="font-space text-xs font-bold uppercase tracking-widest text-brandTextDark border-b border-slate-100 pb-2">HQ Operations</h3>
+                    <div class="space-y-3">
+                        <a href="mailto:vexoraitsolution@gmail.com" class="flex items-center space-x-3 text-sm text-gray-600 hover:text-brandSecondary transition-colors group">
+                            <div class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-brandPrimary/10 transition-colors">
+                                <i class="fa-regular fa-envelope text-xs text-brandSecondary"></i>
+                            </div>
+                            <span class="font-medium">vexoraitsolution@gmail.com</span>
+                        </a>
+                        <a href="tel:+94761132270" class="flex items-center space-x-3 text-sm text-gray-600 hover:text-brandAccent2 transition-colors group">
+                            <div class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-brandAccent2/10 transition-colors">
+                                <i class="fa-solid fa-phone text-xs text-brandAccent2"></i>
+                            </div>
+                            <span class="font-medium">+94 76 113 2270</span>
+                        </a>
+                        <div class="flex items-center space-x-3 text-sm text-gray-600">
+                            <div class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot text-xs text-brandAccent1"></i>
+                            </div>
+                            <span class="font-medium">Sri Lanka</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Grid -->
+        <footer class="border-t border-slate-100 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+            <div>
+                <p>&copy; 2026 <span class="text-brandTextDark font-semibold font-space">Vexora IT Solution</span>. All rights reserved.</p>
+            </div>
+            <div class="flex items-center space-x-4 font-space uppercase tracking-widest text-[10px] font-bold text-gray-400">
+                <span>Innovate</span>
+                <span class="text-brandPrimary">•</span>
+                <span>Build</span>
+                <span class="text-brandAccent1">•</span>
+                <span>Grow</span>
+            </div>
+            <div class="flex space-x-3 text-sm">
+                <!-- Added Facebook Link with Official Styling -->
+                <a href="https://www.facebook.com/vexorait" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-gray-500 hover:bg-[#1877F2] hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Interactive Scripts -->
+    <script>
+    // 3. Handle Notify Me Form Submission
+const form = document.getElementById('notifyForm');
+const submitBtn = document.getElementById('submitBtn');
+const btnText = document.getElementById('btnText');
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzsjf3ZQsHjaLvNyiXLDmYegq_s1Gc345IY6UZrCKRwY358xyn171zrIdH17Qy6pyS3/exec';
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    submitBtn.disabled = true;
+    btnText.innerText = "Sending...";
+    
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            btnText.innerText = "Success! Check Mail";
+            submitBtn.style.background = "#10B981"; // Green color
+            form.reset();
+            
+            setTimeout(() => {
+                btnText.innerText = "Notify Me";
+                submitBtn.disabled = false;
+                submitBtn.style.background = ""; // Reset to original gradient
+            }, 500);
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            btnText.innerText = "Try Again";
+            submitBtn.disabled = false;
+            
+            setTimeout(() => {
+                btnText.innerText = "Notify Me";
+            }, 3000);
+        });
+});
+
+// 1. Smooth Preloader Removal
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.remove(), 700);
+            }, 400);
+        });
+
+        // 2. Mouse Glow Tracking (Light Theme Compatible)
+        const glow = document.getElementById('glow-runtime');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>
